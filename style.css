@@ -1,0 +1,101 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Root Variables */
+:root {
+    --main-purple: #b6599a;
+    --main-blue: #90e8ee;
+    --main-grey: #ccc;
+    --sub-grey: #080508;
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+    padding: 10px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff60;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+/* Title Styles */
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    width: 30px;
+    background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+    left: 0;
+    bottom: 0;
+}
+
+/* User Details Styles */
+.container form .user_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+/* Footer Styles */
+.footer, .generic-footer {
+    margin-bottom: 0;
+}
+
+/* Disclaimer Styles */
+.disclaimer {
+    position: fixed;
+    z-index: 9999999;
+    bottom: 0;
+    right: 0;
+    border-top: 2px solid #5cbeff00;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #ffffff00;
+    padding: 5px 10px;
+}
+
+.disclaimer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) { /* Adjusted to a common breakpoint for better practice */
+    .footer, .generic-footer {
+        margin-bottom: 78px;
+    }
+
+    .disclaimer {
+        text-align: left;
+        border-left: 2px solid #ff5c5c00;
+        border-top-left-radius: 10px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .disclaimer {
+        width: 20%;
+    }
+}
